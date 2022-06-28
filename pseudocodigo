@@ -1,0 +1,147 @@
+Variável: Acumulador de valor
+Variável x = "Nome";
+_______
+
+Imprimir: Imprime um valor na tela
+Imprimir "Feijão";
+_______
+
+Se - Senão: Verifica coisas se são ou não são verdadeiras
+Se (verdadeiro) {
+    Imprimir verdadeiro;
+} Senão {
+    Imprimir falso;
+}
+_______
+Faça - Enquanto: Faça algo enquanto uma expressão não for verdadeira
+Variável x = 0;
+Faça {
+    x + 1
+    Imprimir x;
+} Enquanto (x < 10)
+_______
+
+Enquanto - Faça: Faça uma expressão enquanto essa expressão não for verdadeira
+Enquanto (x < 10){
+    x + 1
+    Imprimir x;
+} Faça
+_______
+
+Para Cada: Para cada item de um registro, faça algo
+Variável conjunto = [1,2,3,4,5,"Jorge"];
+Para Cada(conjunto como item) {
+    Imprimir item;
+}
+_______
+Para: Para cada variação, Acrescente mais um até o final dos registros
+Para (Variável x = 0, x < 10, x++) {
+    Imprime X;
+}
+_______
+
+Sinais para condições:
+= ou Receba: atribui um valor há uma variável
+== ou Igual a: verifica se um valor é igual ao outro valor. 2 é igual a "2"
+=== Igual e do mesmo tipo De: verfica se um valor é igual e do mesmo tipo que o outro valor. 2 É diferente de "2"
+
+! ou Ao Contrário de: Verifica se um valor é o inverso do outro. verdadeiro é diferente de falso ou !verdadeiro == falso
+!= ou Diferente de: Verifica se um valor é ao contrário do outro valor. 2 é diferente de 2 ou "2" ou 2 != 2
+!== ou Complentamente Diferente de: Verifica se um valor e o tipo é diferente do outro. 2 é completamente diferente de "2" ou 2 !== "2"
+
+2 == 2 verdadeiro
+2 == "2" verdadeiro
+2 === 2 verdadeiro
+2 === "2" falso
+verdadeiro == verdadeiro verdadeiro
+"verdadeiro" === verdadeiro falso
+verdadeiro === 0 falso
+falso === 0 verdadeiro
+falso != verdadeiro verdadeiro
+verdadeiro !== 1 falso
+!falso == 1 verdadeiro
+
+
+
+_______
+
+Exercícios
+
+Imprimir o nome se o nome for Feijao
+
+Se (Feijao) {
+    Imprimir Feijao;
+}
+_______
+Imprimir o valor de uma variável se o valor for Feijao
+
+Variável a = "Feijao";
+Se (a == "Feijao") {
+    Imprimir a;
+}
+_______
+
+Imprimir falso se for falso
+Se (falso) {
+    Imprimir falso;
+}
+_______
+
+Imprimir falso se for falso
+Se (verdadeiro) {
+
+} Senão {
+    Imprimir falso;
+}
+_______
+
+Imprimir falso se for falso
+
+Se (!verdadeiro) {
+    Imprimir falso;
+}
+_______
+
+Imprimir o valor de uma variável caso esta variável, somada a 5, resulte em 7
+
+Variável x = 2;
+Variável conta = x + 5 == 7;
+
+Se (conta) {
+    Imprimir x;
+}
+_______
+
+Imprimir o número de vezes, contando um por um, que o Feijao esqueceu de dar espaço entre o parênteses e as chaves. O número foi 7
+Variável x = 0;
+Enquanto (x < 7) {
+    x = x + 1;
+    Imprimir x;
+} Faça
+1
+2
+3
+4
+5
+6
+7
+_______
+
+Receber uma lista de idades de 6 alunos e Imprimir o resultado da soma de todas as idades dos alunos usando um loop
+
+_______
+
+Receber uma lista de nomes e imprimir quantos Vitor existem
+
+_______
+
+Receber uma lista de pessoas e imprimir quantos tem mais de 18 anos
+
+_______
+
+Receber uma lista que contém inúmeros objetos que terão nome do curso e data limite e Imprimir o nome do curso ao lado da data limite
+
+_______
+
+Receber uma lista que contém inúmeros objetos que terão nome e estado civil e imprimir o nome do estao civil mais repetido
+
