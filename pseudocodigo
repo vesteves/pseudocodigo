@@ -61,7 +61,22 @@ falso != verdadeiro verdadeiro
 verdadeiro !== 1 falso
 !falso == 1 verdadeiro
 
+_______
 
+x++ = valor de x + 1
+x-- = valor de x - 1
+
+Exemplo:
+
+x = 10;
+x++ // 11
+x++ // 12
+x++ // 13
+
+x = 10;
+x-- // 9
+x-- // 8
+x-- // 7
 
 _______
 
@@ -129,19 +144,83 @@ _______
 
 Receber uma lista de idades de 6 alunos e Imprimir o resultado da soma de todas as idades dos alunos usando um loop
 
+Variável idades = [12, 15, 11, 3, 5, 8];
+
+Variável resultado = 0;
+Para Cada(idades como item) {
+    resultado = item + resultado;
+}
+Imprimir resultado;
+
+
+Posicao 0 = 12
+Para Cada(idades como 12) {
+    resultado = 12 + 0;
+}
+// resultado === 12
+
+Posicao 1 = 15
+Para Cada(idades como 15) {
+    resultado = 15 + 12;
+}
+// resultado === 27
+
+Posicao 2 = 11
+Para Cada(idades como 11) {
+    resultado = 11 + 27;
+}
+// resultado === 38
+
+Posicao 3 = 3
+Para Cada(idades como 3) {
+    resultado = 3 + 38;
+}
+// resultado === 41
+
+Posicao 4 = 5
+Para Cada(idades como 5) {
+    resultado = 5 + 41;
+}
+// resultado === 46
+
+Posicao 5 = 8
+Para Cada(idades como 8) {
+    resultado = 8 + 46;
+}
+// resultado === 54
+
+
+Imprimir resultado;
+
 _______
 
 Receber uma lista de nomes e imprimir quantos Vitor existem
+
+Variável nomes = [];
+Para cada (nomes como "Vitor") {
+    Imprimir 1  + 1++;
+}
 
 _______
 
 Receber uma lista de pessoas e imprimir quantos tem mais de 18 anos
 
+Variável pessoas = [[nome,idade]];
+Para cada (pessoas como idade > 18) {
+    Imprimir pessoas;
+}
+
 _______
 
 Receber uma lista que contém inúmeros objetos que terão nome do curso e data limite e Imprimir o nome do curso ao lado da data limite
+
+Variável objetos = [[nome,dataLimite]] 
+Para cada (objetos como objetos) {
+    Imprimir objetos->nome , "-" , objetos-dataLimite;
+}
 
 _______
 
 Receber uma lista que contém inúmeros objetos que terão nome e estado civil e imprimir o nome do estao civil mais repetido
 
+Variável objetos = [[nome,estadoCivil]];
