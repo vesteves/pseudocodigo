@@ -1,44 +1,53 @@
 Variável: Acumulador de valor
 Variável x = "Nome";
-_______
+
+---
 
 Imprimir: Imprime um valor na tela
 Imprimir "Feijão";
-_______
+
+---
 
 Se - Senão: Verifica coisas se são ou não são verdadeiras
 Se (verdadeiro) {
-    Imprimir verdadeiro;
+Imprimir verdadeiro;
 } Senão {
-    Imprimir falso;
+Imprimir falso;
 }
-_______
+
+---
+
 Faça - Enquanto: Faça algo enquanto uma expressão não for verdadeira
 Variável x = 0;
 Faça {
-    x + 1
-    Imprimir x;
+x + 1
+Imprimir x;
 } Enquanto (x < 10)
-_______
+
+---
 
 Enquanto - Faça: Faça uma expressão enquanto essa expressão não for verdadeira
 Enquanto (x < 10){
-    x + 1
-    Imprimir x;
+x + 1
+Imprimir x;
 } Faça
-_______
+
+---
 
 Para Cada: Para cada item de um registro, faça algo
 Variável conjunto = [1,2,3,4,5,"Jorge"];
 Para Cada(conjunto como item) {
-    Imprimir item;
+Imprimir item;
 }
-_______
+
+---
+
 Para: Para cada variação, Acrescente mais um até o final dos registros
 Para (Variável x = 0, x < 10, x++) {
-    Imprime X;
+Imprime X;
 }
-_______
+
+---
 
 Sinais para condições:
 = ou Receba: atribui um valor há uma variável
@@ -61,7 +70,7 @@ falso != verdadeiro verdadeiro
 verdadeiro !== 1 falso
 !falso == 1 verdadeiro
 
-_______
+---
 
 x++ = valor de x + 1
 x-- = valor de x - 1
@@ -78,49 +87,50 @@ x-- // 9
 x-- // 8
 x-- // 7
 
-_______
+---
 
 Exercícios
 
 Imprimir o nome se o nome for Feijao
-
 Se ("Feijao") {
     Imprimir "Feijao";
 }
 
-// Feijao 
+---
 
-_______
 Imprimir o valor de uma variável se o valor for Feijao
-
 Variável nome = "Feijao";
 Se (nome == "Feijao") {
     Imprimir nome;
 }
-
-// Feijao
-_______
+---
 
 Imprimir falso se for falso
 Se (!verdadeiro) {
     Imprimir falso;
 }
-
-_______
+---
 
 Imprimir falso se for falso
 Se (falso) {
     Imprimir falso;
 }
-_______
+
+---
 
 Imprimir falso se for falso
-
-Se ("bola" != "bola") {
+Se ("bode" == "cabra") {
     Imprimir falso;
 }
 
-_______
+---
+
+Imprimir falso se for falso
+Se (2 < 2 ) {
+    Imprimir falso;
+}
+
+---
 
 Imprimir o valor de uma variável caso esta variável, somada a 5, resulte em 7
 Variável x = 0;
@@ -128,97 +138,59 @@ Variável soma = x + 5;
 Se (soma == 7) {
     Imprimir soma;
 }
-// 
-_______
 
-Imprimir o número de vezes, contando um por um, que o Feijao esqueceu de dar espaço entre o parênteses e as chaves. O número foi 3
-Para (Variável x = 1, x <= 3, x++) {
-    Imprime x;
+---
+
+Conte de 1 até 3 imprimindo número por número
+Para (Variável x = 1, x > 3, x++) {
+    Imprimir x;
 }
-1
-2
-3
-
-_______
+// i1
+// 2
+// 3
+---
 
 Receber uma lista de idades de 6 alunos e Imprimir o resultado da soma de todas as idades dos alunos usando um loop
-
-Variável idades = [12, 15, 11, 3, 5, 8];
-
-Variável resultado = 0;
-Para Cada(idades como item) {
-    resultado = item + resultado;
+Variável idade = [15,13,14,16,12,13];
+Variável soma = 0;
+Para cada (idade como item) {
+    soma = item + soma;
 }
-Imprimir resultado;
+Imprimir soma;
 
 
-Posicao 0 = 12
-Para Cada(idades como 12) {
-    resultado = 12 + 0;
+---
+
+Receber uma lista de nomes e imprimir o número de vezes que o nome Vitor aparece
+Variável nomes = ["Vitor","Feijao","Filipe","Carol"];
+Variável somavitor = 0;
+Para Cada(nomes como item) {
+    Se (item == "Vitor") {
+        somavitor = somavitor + 1;
+    }
 }
-// resultado === 12
-
-Posicao 1 = 15
-Para Cada(idades como 15) {
-    resultado = 15 + 12;
-}
-// resultado === 27
-
-Posicao 2 = 11
-Para Cada(idades como 11) {
-    resultado = 11 + 27;
-}
-// resultado === 38
-
-Posicao 3 = 3
-Para Cada(idades como 3) {
-    resultado = 3 + 38;
-}
-// resultado === 41
-
-Posicao 4 = 5
-Para Cada(idades como 5) {
-    resultado = 5 + 41;
-}
-// resultado === 46
-
-Posicao 5 = 8
-Para Cada(idades como 8) {
-    resultado = 8 + 46;
-}
-// resultado === 54
+Imprimir somavitor;
 
 
-Imprimir resultado;
-
-_______
-
-Receber uma lista de nomes e imprimir quantos Vitor existem
-
-Variável nomes = [];
-Para cada (nomes como "Vitor") {
-    Imprimir 1  + 1++;
-}
-
-_______
+---
 
 Receber uma lista de pessoas e imprimir quantos tem mais de 18 anos
 
 Variável pessoas = [[nome,idade]];
 Para cada (pessoas como idade > 18) {
-    Imprimir pessoas;
+Imprimir pessoas;
 }
 
-_______
+---
 
 Receber uma lista que contém inúmeros objetos que terão nome do curso e data limite e Imprimir o nome do curso ao lado da data limite
 
-Variável objetos = [[nome,dataLimite]] 
+Variável objetos = [[nome,dataLimite]]
 Para cada (objetos como objetos) {
-    Imprimir objetos->nome , "-" , objetos-dataLimite;
+Imprimir objetos->nome , "-" , objetos-dataLimite;
 }
 
-_______
+---
 
 Receber uma lista que contém inúmeros objetos que terão nome e estado civil e imprimir o nome do estao civil mais repetido
 
