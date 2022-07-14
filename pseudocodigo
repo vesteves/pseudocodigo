@@ -92,8 +92,8 @@ x-- // 7
 Exercícios
 
 Imprimir o nome se o nome for Feijao
-Se ("Feijao") {
-    Imprimir "Feijao";
+Se ("Feijão) {
+    Imprimir "Feijão";
 }
 
 ---
@@ -151,9 +151,9 @@ Para (Variável x = 1, x > 3, x++) {
 ---
 
 Receber uma lista de idades de 6 alunos e Imprimir o resultado da soma de todas as idades dos alunos usando um loop
-Variável idade = [15,13,14,16,12,13];
+Variável idades = [15,13,14,16,12,13];
 Variável soma = 0;
-Para cada (idade como item) {
+Para cada (idades como item) {
     soma = item + soma;
 }
 Imprimir soma;
@@ -176,22 +176,103 @@ Imprimir somavitor;
 
 Receber uma lista de pessoas e imprimir quantos tem mais de 18 anos
 
-Variável pessoas = [[nome,idade]];
-Para cada (pessoas como idade > 18) {
-Imprimir pessoas;
-}
+nome: Vitor
+idade: 36
+
+nome: Feijão
+idade: 36
+
+nome: Carol
+idade: 35
+
+nome: Jade
+idade: 6
+
+Variável pessoas = [
+    {
+        nome:"Vitor",
+        idade: 36
+    },
+    {
+        nome:"Feijão",
+        idade: 36
+    },
+    {
+        nome: "Carol",
+        idade: 35
+    },
+    {
+        nome: "Jade",
+        idade: 6
+    }
+];
+Variável velhos = 0;
+Para cada(pessoas como item) {
+  Se (item.idade > 18){
+    velhos = velhos++;
+  }
+} 
+Imprimir velhos;
+
+
 
 ---
 
 Receber uma lista que contém inúmeros objetos que terão nome do curso e data limite e Imprimir o nome do curso ao lado da data limite
+"matemática - 05/02/2022"
 
-Variável objetos = [[nome,dataLimite]]
-Para cada (objetos como objetos) {
-Imprimir objetos->nome , "-" , objetos-dataLimite;
+Recebi lista;
+Para cada(lista como item){
+    Imprimir item.curso + " - " + item.data;
 }
+
+
 
 ---
 
-Receber uma lista que contém inúmeros objetos que terão nome e estado civil e imprimir o nome do estao civil mais repetido
+Receber uma lista que contém inúmeros objetos que terão nome e estado civil e imprimir o nome do estado civil mais repetido
 
-Variável objetos = [[nome,estadoCivil]];
+Recebi lista;
+
+Variável estadoscivis = [];
+Variável todososestadoscivis = [];
+Para cada (lista como item) {
+    Variável encontrou = falso;
+    Para cada (estadoscivis como estadocivil) {
+        Se (estadocivil == item.estado) {
+            encontrou = verdadeiro;
+        }
+    }
+    Se (encontrou) {
+        estadoscivis.adicionar({
+            estado: item.estado,
+            contador: 0
+        });
+    }
+
+    todososestadoscivis.adicionar(item.estado);
+}
+
+Para cada (todososestadoscivis como item) {
+    Para cada (estadoscivis como estadocivil) {
+        Se (item === estadocivil.nome) {
+            estadocivil.contador = estadocivil.contador++
+        }
+    }
+}
+
+Variável maior = {
+    nome: "",
+    contador: 0
+};
+Para cada (estadoscivis como item) {
+    Se (item.contador > maior.contador) {
+        maior = item;
+    }
+}
+
+Imprimir maior.nome;
+
+
+
+

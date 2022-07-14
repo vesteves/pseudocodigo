@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var idades = [12, 15, 11, 3, 5, 8];
+      var lista = [
+        {
+          nome: "Carlos",
+          estado: "solteiro",
+        },
+        {
+          nome: "Mariana",
+          estado: "casado",
+        },
+        {
+          nome: "Roberto",
+          estado: "solteiro",
+        },
+        {
+          nome: "Josefa",
+          estado: "solteiro",
+        },
+        {
+          nome: "Marcos",
+          estado: "casado",
+        },
+        {
+          nome: "Maria",
+          estado: "solteiro",
+        },
+      ];
 
-        var resultado = 0;
-        idades.forEach(item => {
-            resultado = item + resultado;
-        })
-        console.log(resultado);
-    </script>
-    <?php
-        $idades = [12, 15, 11, 3, 5, 8];
-
-        $resultado = 0;
-        foreach($resultado as $item) {
-            $resultado = $item + $resultado;
+      var estadoscivis = [];
+      var todososestadoscivis = [];
+      lista.forEach((item) => {
+        var encontrou = false;
+        estadoscivis.forEach((estadocivil) => {
+          if (estadocivil.estado == item.estado) {
+            encontrou = true;
+          }
+        });
+        if (!encontrou) {
+          estadoscivis.push({
+            estado: item.estado,
+            contador: 0,
+          });
         }
-        echo $resultado;
-    ?>
-</body>
+
+        todososestadoscivis.push(item.estado);
+      });
+
+      todososestadoscivis.forEach((item) => {
+        estadoscivis.forEach((estadocivil) => {
+          if (item == estadocivil.estado) {
+            estadocivil.contador++;
+          }
+        });
+      });
+
+      var maior = {
+        nome: "",
+        contador: 0,
+      };
+
+      estadoscivis.forEach((item) => {
+        if (item.contador > maior.contador) {
+          maior = item;
+        }
+      });
+
+      console.log(maior.estado);
+    </script>
+  </body>
 </html>
